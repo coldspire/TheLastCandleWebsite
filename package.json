@@ -1,0 +1,25 @@
+{
+  "name": "thelastcandlewebsite",
+  "version": "1.0.0",
+  "description": "The personal Web site of Owen R Anderson",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coldspire/TheLastCandleWebsite.git"
+  },
+  "author": "Owen Anderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coldspire/TheLastCandleWebsite/issues"
+  },
+  "homepage": "https://github.com/coldspire/TheLastCandleWebsite#readme",
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
