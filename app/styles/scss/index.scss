@@ -1,5 +1,38 @@
 /* styles.css */
 
+:root {
+    --z-back: 1;
+    --z-front: 10;
+    --sky-height: 66vh;
+}
+
 * {
     box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sky {
+    z-index: var(--z-back);
+
+    position: absolute;
+    height: var(--sky-height);
+    width: 100vw;
+
+    //background: linear-gradient(hsl(50, 50, 100), hsl(50, 100, 50) 33%, hsl(240, 50, 44) 75%, hsl(240, 50, 25));
+    background: linear-gradient(hsl(240, 75, 15),hsl(240, 40, 25) 15%, hsl(240, 65, 55) 50%, hsl(50, 100, 50));
+}
+
+.earth-near {
+    z-index: var(--z-front);
+
+    position: absolute;
+    top: var(--sky-height);
+    height: calc(100vh - var(--sky-height));
+    width: 100vw;
+
+    background-color: black;
 }

@@ -1,3 +1,27 @@
 /* styles.css */
+:root {
+  --z-back: 1;
+  --z-front: 10;
+  --sky-height: 66vh; }
+
 * {
   box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+.sky {
+  z-index: var(--z-back);
+  position: absolute;
+  height: var(--sky-height);
+  width: 100vw;
+  background: linear-gradient(#0a0a43, #262659 15%, #4242d7 50%, #ffd500); }
+
+.earth-near {
+  z-index: var(--z-front);
+  position: absolute;
+  top: var(--sky-height);
+  height: calc(100vh - var(--sky-height));
+  width: 100vw;
+  background-color: black; }
