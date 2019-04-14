@@ -1,4 +1,5 @@
-const gulp = require('gulp');
+const { gulp, series } = require('gulp');
+const del = require('del');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 
@@ -21,5 +22,18 @@ function watch() {
     gulp.watch('./app/scripts/js/**/*.js').on('change', browserSync.reload);
 }
 
+function cleanDist(done) {
+    del.sync('dist');
+    done();
+}
+
+function createDist(done) {
+
+
+    done();
+}
+
 exports.style = style;
 exports.watch = watch;
+exports.clean = cleanDist;
+exports.build = series(cleanDist, createDist);
